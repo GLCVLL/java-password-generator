@@ -23,6 +23,16 @@ public class PasswordGenerator {
         String dataNascita = scanner.nextLine();
         String[] partiData = dataNascita.split("/");
         
+        
+        // Calcolo la somma di giorno, mese e anno
+        int giorno = Integer.parseInt(partiData[0]);
+        int mese = Integer.parseInt(partiData[1]);
+        int anno = Integer.parseInt(partiData[2]);
+        int sommaData = giorno + mese + anno;
+        
+        // Genero e stampo la password
+        String password = nome + "-" + cognome + "-" + colore + "-" + sommaData;
+        System.out.println("La tua password è: " + password);
 	}
 
 }
